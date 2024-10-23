@@ -12,7 +12,7 @@ class Author(models.Model):
 class Book(models.Model):
     title = models.CharField(max_length=100)
     author = models.CharField(max_length=100)
-    count = models.IntegerField()
+    count = models.PositiveIntegerField()
     author = models.ForeignKey(Author, related_name='books', on_delete=models.CASCADE)
 
     def __str__(self):
